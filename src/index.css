@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --rg-black: #111111;
+    --rg-surface: #1a1a1a;
+    --rg-white: #ffffff;
+    --rg-red: #e50914;
+    --rg-border: #e5e5e5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 7%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 7%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 7%;
+        --primary: 0 0% 7%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 96%;
+        --secondary-foreground: 0 0% 7%;
+        --muted: 0 0% 96%;
+        --muted-foreground: 0 0% 40%;
+        --accent: 357 98% 45%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 357 98% 45%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 90%;
+        --input: 0 0% 90%;
+        --ring: 0 0% 7%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Typography helpers */
+.font-display {
+    font-family: "Bebas Neue", "Archivo", sans-serif;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+}
+.font-strong {
+    font-family: "Archivo", sans-serif;
+}
+.font-body {
+    font-family: "Inter", sans-serif;
+}
+
+/* Outline / stroke text for editorial marquee */
+.text-stroke {
+    -webkit-text-stroke: 1.5px #111111;
+    color: transparent;
+}
+.text-stroke-light {
+    -webkit-text-stroke: 1.5px #ffffff;
+    color: transparent;
+}
+
+/* Selection */
+::selection {
+    background: #e50914;
+    color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #111111;
+}
+::-webkit-scrollbar-thumb {
+    background: #e50914;
+}
+
+/* WhatsApp float pulse */
+@keyframes rg-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+.rg-pulse {
+    animation: rg-pulse 2.2s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rg-pulse {
+        animation: none;
+    }
+}
+
+[data-debug-wrapper="true"] {
+    display: contents !important;
+}
