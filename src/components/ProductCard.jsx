@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { openWhatsApp, brl } from "@/lib/whatsapp";
-import { WHATSAPP_MESSAGES } from "@/data/store";
+
 
 // Ícone WhatsApp compacto
 function WGlyph({ size = 16 }) {
@@ -92,17 +91,13 @@ export default function ProductCard({ product, index = 0 }) {
           )}
         </div>
 
-        <button
-  data-testid={`buy-whatsapp-${product.id}`}
-  onClick={() => {
-    openWhatsApp(
-      WHATSAPP_MESSAGES.product(product.name, product.price)
-    );
-  }}
+       <Link
+  to={`/produto/${product.id}`}
+  data-testid={`view-details-${product.id}`}
   className="mt-4 flex items-center justify-center gap-2 bg-[#111111] py-3 font-strong text-xs font-bold uppercase tracking-widest text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#e50914] hover:shadow-lg hover:shadow-[#e50914]/30"
 >
-  <WGlyph /> Comprar pelo WhatsApp
-</button>
+  Ver detalhes
+</Link>
       </div>
     </motion.div>
   );
