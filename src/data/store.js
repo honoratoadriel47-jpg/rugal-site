@@ -77,9 +77,9 @@ export const CATEGORIES = [
 ];
 
 export const DRIVE = {
-  camisasTime: "https://drive.google.com/drive/folders/1E-yGNuYVKqnAs3MhujT4XFcuh1-Twg0Y?usp=drive_link"
+  camisasTime: "https://drive.google.com/drive/folders/1E-yGNuYVKqnAs3MhujT4XFcuh1-Twg0Y?usp=drive_link",
+  tabelaAtacado: "https://drive.google.com/file/d/1o3JQftigFI9l8Zu6DCA4KRkzJhFwSrNF/view?usp=drive_link",
 };
-
 export const TRUST_BADGES = [
   { icon: "ShieldCheck", title: "Produtos Originais", text: "Peças autênticas e selecionadas." },
   { icon: "Truck", title: "Envio para todo Brasil", text: "Rápido e rastreável." },
@@ -120,22 +120,26 @@ export const PRODUCTS = [
   name: "Camisa Real Madrid 25/26",
   category: "times",
   brand: "Adidas",
-  price: 169.90,
-  oldPrice: 219.90,
+  price: 70.00,
+  oldPrice: 119.90,
  image: "/images/times/realmadrid.jpg",
-  gallery: gal(20, 21),
+  gallery: [
+  "/images/times/realmadrid.jpg",
+],
   tag: "Mais vendida",
   description: "Camisa versão torcedor com tecido respirável e excelente acabamento."
 },
 {
-  id: "flamemgo-2526",
+  id: "flamengo-2526",
   name: "Camisa Flamengo 25/26",
   category: "times",
   brand: "Adidas",
-  price: 169.90,
-  oldPrice: 219.90,
+  price: 70.00,
+  oldPrice: 119.90,
  image: "/images/times/flamengo.jpg",
-  gallery: gal(20, 21),
+  gallery: [
+  "/images/times/flamengo.jpg",
+],
   tag: "Mais vendida",
   description: "Camisa versão torcedor com tecido respirável e excelente acabamento."
 },
@@ -144,10 +148,12 @@ export const PRODUCTS = [
   name: "Camisa Santos 25/26",
   category: "times",
   brand: "Adidas",
-  price: 169.90,
-  oldPrice: 219.90,
+  price: 70.00,
+  oldPrice: 119.90,
  image: "/images/times/santos.jpg",
-  gallery: gal(20, 21),
+  gallery: [
+  "/images/times/santos.jpg",
+],
   tag: "Mais vendida",
   description: "Camisa versão torcedor com tecido respirável e excelente acabamento."
 },
@@ -156,10 +162,12 @@ export const PRODUCTS = [
   name: "Camisa São Paulo 25/26",
   category: "times",
   brand: "Adidas",
-  price: 169.90,
-  oldPrice: 219.90,
+  price: 70.00,
+  oldPrice: 119.90,
  image: "/images/times/saopaulo.jpg",
-  gallery: gal(20, 21),
+  gallery: [
+  "/images/times/saopaulo.jpg",
+],
   tag: "Mais vendida",
   description: "Camisa versão torcedor com tecido respirável e excelente acabamento."
 },

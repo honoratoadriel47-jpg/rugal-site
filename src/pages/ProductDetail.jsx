@@ -6,10 +6,15 @@ import { ArrowLeft, Check, Ruler } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import ProductCard from "@/components/ProductCard";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { getProductById, getRelated, SIZE_TABLE, FEATURES } from "@/data/store";
+import {
+  getProductById,
+  getRelated,
+  SIZE_TABLE,
+  FEATURES,
+  DRIVE,
+} from "@/data/store";
 import { openWhatsApp, brl } from "@/lib/whatsapp";
 import { WHATSAPP_MESSAGES } from "@/data/store";
-import { DRIVE } from "@/data/store";
 
 function WGlyph({ size = 20 }) {
   return (
@@ -135,17 +140,53 @@ ${
     </h3>
 
     <p className="mt-2 text-sm text-zinc-600">
-      Temos centenas de camisas nacionais e internacionais disponíveis em nosso catálogo completo.
-    </p>
+  Temos centenas de camisas nacionais e internacionais disponíveis.
+  Consulte também nossa tabela de preços para atacado.
+</p>
 
-    <a
-      href={DRIVE.camisasTime}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-4 inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-white hover:bg-red-600 transition"
-    >
-      Ver catálogo completo
-    </a>
+<div className="mt-5 space-y-3">
+
+  <a
+    href={DRIVE.camisasTime}
+    target="_blank"
+    rel="noopener noreferrer"
+   className="group flex cursor-pointer items-center justify-between rounded-xl border-2 border-zinc-300 bg-zinc-50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-red-600 hover:bg-white hover:shadow-xl"
+  >
+    <div>
+      <h4 className="font-bold uppercase tracking-wide text-black">
+        📂 Catálogo Completo
+      </h4>
+      <p className="mt-1 text-sm text-zinc-500">
+        Veja todos os modelos disponíveis.
+      </p>
+    </div>
+
+    <span className="text-2xl transition-transform duration-300 group-hover:translate-x-2">
+      →
+    </span>
+  </a>
+
+  <a
+    href={DRIVE.tabelaAtacado}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex cursor-pointer items-center justify-between rounded-xl border-2 border-zinc-300 bg-zinc-50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-red-600 hover:bg-white hover:shadow-xl"
+  >
+    <div>
+      <h4 className="font-bold uppercase tracking-wide text-black">
+        📋 Tabela de Atacado
+      </h4>
+      <p className="mt-1 text-sm text-zinc-500">
+        Consulte os preços por quantidade.
+      </p>
+    </div>
+
+    <span className="text-2xl transition-transform duration-300 group-hover:translate-x-2">
+      →
+    </span>
+  </a>
+
+</div>
   </div>
 )}
 
