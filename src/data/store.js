@@ -76,6 +76,10 @@ export const CATEGORIES = [
   { slug: "lancamentos", name: "Lançamentos", subtitle: "Drop 2026", image: IMG.jerseyLife, span: "lg:col-span-3" },
 ];
 
+export const DRIVE = {
+  camisasTime: "https://drive.google.com/drive/folders/SEU_LINK"
+};
+
 export const TRUST_BADGES = [
   { icon: "ShieldCheck", title: "Produtos Originais", text: "Peças autênticas e selecionadas." },
   { icon: "Truck", title: "Envio para todo Brasil", text: "Rápido e rastreável." },
@@ -114,6 +118,18 @@ export const PRODUCTS = [
   { id: "lanc-night-city", name: "Night City Tee", category: "lancamentos", brand: "Rugal", price: 154.9, oldPrice: 214.9, image: IMG.hero, gallery: gal(0, 5), tag: "Novo", description: "Estampa noturna full print. Inspirada nas luzes da metrópole. Cada detalhe pensado pra impressionar." },
   { id: "fire-red-alert", name: "Fire Red Alert", category: "fire", brand: "Fire", price: 149.9, oldPrice: 209.9, image: IMG.jerseyLife, gallery: gal(4, 0), tag: "Fire", description: "Fire com acento vermelho de alta voltagem. Pra quem não passa despercebido em lugar nenhum." },
   { id: "time-classic-home", name: "Classic Home Jersey", category: "times", brand: "Nacional", price: 184.9, oldPrice: 259.9, image: IMG.jersey, gallery: gal(3, 5), description: "Camisa clássica de time nacional versão home. Tradição e tecnologia no mesmo tecido." },
+  {
+  id: "real-madrid-2526",
+  name: "Camisa Real Madrid 25/26",
+  category: "times",
+  brand: "Adidas",
+  price: 169.90,
+  oldPrice: 219.90,
+  image: IMG.realmadrid,
+  gallery: gal(20, 21),
+  tag: "Mais vendida",
+  description: "Camisa versão torcedor com tecido respirável e excelente acabamento."
+},
 ];
 
 export const SIZE_TABLE = [

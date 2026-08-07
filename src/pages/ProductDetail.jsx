@@ -9,6 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { getProductById, getRelated, SIZE_TABLE, FEATURES } from "@/data/store";
 import { openWhatsApp, brl } from "@/lib/whatsapp";
 import { WHATSAPP_MESSAGES } from "@/data/store";
+import { DRIVE } from "@/data/store";
 
 function WGlyph({ size = 20 }) {
   return (
@@ -127,6 +128,26 @@ ${
             >
               <WGlyph /> Comprar pelo WhatsApp
             </button>
+            {product.category === "times" && (
+  <div className="mt-8 rounded-xl border border-zinc-200 p-5 bg-zinc-50">
+    <h3 className="font-bold text-lg">
+      Não encontrou o modelo que procura?
+    </h3>
+
+    <p className="mt-2 text-sm text-zinc-600">
+      Temos centenas de camisas nacionais e internacionais disponíveis em nosso catálogo completo.
+    </p>
+
+    <a
+      href={DRIVE.camisasTime}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4 inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-white hover:bg-red-600 transition"
+    >
+      Ver catálogo completo
+    </a>
+  </div>
+)}
 
             {/* Features */}
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
